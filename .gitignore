@@ -1,0 +1,21 @@
+# Ruby / Rails
+.bundle
+log/*
+tmp/*
+db/*.sqlite3
+db/*.sqlite3-journal
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
