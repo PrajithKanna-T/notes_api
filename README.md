@@ -60,6 +60,23 @@ This structure keeps controllers minimal and business logic reusable.
 | created_at | datetime | Auto-generated |
 
 ---
+## AI Summarization Design
+
+The AI functionality is implemented using a **service object**:
+
+File: `app/services/notes/summarize_service.rb`
+
+#### Responsibilities:
+
+Accept note content
+
+Call Ollama’s local HTTP API
+
+Generate a concise summary
+
+Handle failures gracefully with a fallback response
+
+Controllers never contain AI-specific logic.
 
 ## API Endpoints
 
@@ -94,9 +111,9 @@ Response:
 
 {
   "id": 1,
-  "title": "My first note",
-  "content": "This is a long paragraph that needs summarizing...",
-  "summary": "Concise AI-generated summary.",
-  "created_at": "2025-12-19T06:00:00Z"
+  "title": "Local LLM Test",
+  "content": "Rails API integrated with Ollama for summarization.",
+  "summary": "This note explains how a Rails API integrates with the Ollama local LLM to automatically generate concise summaries.",
+  "created_at": "2025-12-19T06:05:42.123Z"
 }
 
