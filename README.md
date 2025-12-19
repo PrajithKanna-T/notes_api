@@ -63,19 +63,40 @@ This structure keeps controllers minimal and business logic reusable.
 
 ## API Endpoints
 
-## API Endpoints
+### Get All Notes 
+
+**Get** `/notes`
+
+## Get Note by ID
+
+**Get** `/notes/id`
 
 ### Create a Note
 
 **POST** `/notes`
 
+### Testing the API (Windows PowerShell)
+
 #### Request
 
-```json
-{
+```powershell
+curl -X POST http://localhost:3000/notes `
+-H "Content-Type: application/json" `
+-d '{
   "note": {
-    "title": "My first note",
-    "content": "This is a long paragraph that needs summarizing..."
+    "title": "Local LLM Test",
+    "content": "Rails API integrated with Ollama for summarization."
   }
+}'
+
+
+Response:
+
+{
+  "id": 1,
+  "title": "My first note",
+  "content": "This is a long paragraph that needs summarizing...",
+  "summary": "Concise AI-generated summary.",
+  "created_at": "2025-12-19T06:00:00Z"
 }
 
