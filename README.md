@@ -1,24 +1,6 @@
-# README
+# Notes API with Local LLM Summarization (Rails + Ollama)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Ruby on Rails API that allows users to create notes and automatically generates concise summaries using a local Large Language Model (LLM) powered by Ollama.
 
-Things you may want to cover:
+This project demonstrates clean API design, service object architecture, and local AI integration without external APIs.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
