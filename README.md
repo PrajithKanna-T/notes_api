@@ -78,6 +78,8 @@ Handle failures gracefully with a fallback response
 
 Controllers never contain AI-specific logic.
 
+---
+
 ## API Endpoints
 
 ### Get All Notes 
