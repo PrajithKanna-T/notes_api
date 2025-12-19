@@ -79,5 +79,3 @@ This structure keeps controllers minimal and business logic reusable.
   }
 }
 
----
-
