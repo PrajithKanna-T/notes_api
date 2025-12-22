@@ -31,8 +31,7 @@ The AI logic is isolated using a service object to ensure maintainability and sc
 - Ruby 3.4+
 - Ruby on Rails 8 (API-only)
 - SQLite (development)
-- Ollama (local LLM runtime)
-- Mistral / LLaMA / Gemma models
+- Ollama Mistral Model(local LLM runtime)
 
 ---
 
@@ -99,9 +98,11 @@ Controllers never contain AI-specific logic.
 #### Request
 
 ```powershell
-curl -X POST http://localhost:3000/notes `
--H "Content-Type: application/json" `
--d '{
+ Invoke-RestMethod `
+Uri http://localhost:3000/notes `
+Method POST `
+ContentType "application/json" `
+Body '{
   "note": {
     "title": "Local LLM Test",
     "content": "Rails API integrated with Ollama for summarization."
